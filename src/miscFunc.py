@@ -8,8 +8,8 @@ def get_key(val, list):
   
     return "key doesn't exist"
 
-def pad():
-    print('\n \n \n \n \n')
+def pad(num = 4):
+    print('\n'*num)
 
 
 def clear(): 
@@ -17,3 +17,16 @@ def clear():
         system('cls') 
     else: 
         system('clear') 
+
+
+def text(text, lineBreaks):
+    print(f"{f'{text}':^115}",  lineBreaks)
+
+
+def get_persona(dict):
+    p_options = []
+    for e in dict.keys():
+        char = e[0].lower()
+        string = f"[{char}] {e}"
+        p_options.append(string)
+    return p_options
